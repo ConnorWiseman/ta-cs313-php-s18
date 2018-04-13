@@ -62,6 +62,7 @@ When working with PHP applications, Composer is a required dependency of the Her
 Run the following from the command line.
 
 ```shell
+git --version
 heroku --version
 composer --version
 psql --version
