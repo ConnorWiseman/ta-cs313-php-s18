@@ -42,12 +42,12 @@ The course recommends either Bitnami's WAPP (Windows, Apache, PHP, and PostgreSQ
 Advanced users who prefer more flexibility may install or download the individual component parts of a local development stack. However, setting up your own development environment is not discussed in the course. Proceed at your own risk.
 
 * [PHP](http://us1.php.net/downloads.php)
-  * Thread-safe for Apache
-  * Non-thread-safe for mostly everything else
+    * Thread-safe for Apache
+    * Non-thread-safe for mostly everything else
 * [PostgreSQL](https://www.postgresql.org/download/)
 * A web server
-  * [Apache](https://httpd.apache.org/download.cgi)
-  * [nginx](http://nginx.org/en/download.html)
+    * [Apache](https://httpd.apache.org/download.cgi)
+    * [nginx](http://nginx.org/en/download.html)
 
 
 ## Install Composer
@@ -119,13 +119,13 @@ Perform the following from the command line within the directory of your local r
 
 1. `git status` to display modified files
 2. `git add .` to stage all modified files
-  * `git add <file>` will stage one specific modified file
+    * `git add <file>` will stage one specific modified file
 3. `git status` to display all staged files
 4. `git commit -m "<message>"` to commit all staged files
-  * Get in the habit of providing useful commit messages!
+    * Get in the habit of providing useful commit messages!
 5. `git status` to display commit status
 6. `git push` to push all code changes to GitHub
-  * You may be required to sign in with your GitHub credentials at this point
+    * You may be required to sign in with your GitHub credentials at this point
 7. `git status` to display commit status again
 
 Open your GitHub repository in your browser and ensure that your files are appearing correctly.
@@ -152,7 +152,7 @@ Ensure that your changes were successful by creating a simple HTML or PHP file i
 The course expects students to utilize [PDO](http://php.net/manual/en/book.pdo.php) in their project. By default, the PDO driver for PostgreSQL may be disabled. Perform the following tasks to enable it.
 
 1. Locate the `php.ini` configuration file your local development stack is using
-  * You can find the exact path to your `php.ini` in the output of [`phpinfo()`](http://php.net/manual/en/function.phpinfo.php)
+    * You can find the exact path to your `php.ini` in the output of [`phpinfo()`](http://php.net/manual/en/function.phpinfo.php)
 2. Open `php.ini` in a text editor
 3. Find the `Dynamic Extensions` section
 4. Uncomment `extension=pdo_pgsql` if necessary by removing the semicolon at the beginning of the line
@@ -167,7 +167,7 @@ In addition, PHP has certain configuration settings that will make developing yo
 For your development environment, you will probably want to change these settings. The following tasks are _optional_ but strongly advised.
 
 1. Locate the `php.ini` configuration file your local development stack is using
-  * You can find the exact path to your `php.ini` in the output of [`phpinfo()`](http://php.net/manual/en/function.phpinfo.php)
+    * You can find the exact path to your `php.ini` in the output of [`phpinfo()`](http://php.net/manual/en/function.phpinfo.php)
 2. Open `php.ini` in a text editor
 3. Find the `Error handling and logging` section
 4. Set `error_reporting` to `E_ALL`
