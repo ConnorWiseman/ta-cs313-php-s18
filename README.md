@@ -2,6 +2,8 @@
 
 See also the instuctions in I-Learn and Heroku's official example repository at  [heroku/php-getting-started](https://github.com/heroku/php-getting-started).
 
+As of Spring Semester 2018, these instructions are somewhat outdated. The course no longer explicitly has students install a local development environment. This material is merely supplemental.
+
 
 ## Before beginning
 
@@ -34,7 +36,7 @@ You will use the Heroku CLI to create and manage Heroku applications. The Heroku
 
 ## Install a local development stack
 
-The course recommends either Bitnami's WAPP (Windows, Apache, PHP, and PostgreSQL) or MAPP (macOS, Apache, PHP, and PostgreSQL) stack for ease of development. If you use either of these, pay attention to the directory where they were installed. It will become useful shortly.
+In the past, the course recommended either Bitnami's WAPP (Windows, Apache, PHP, and PostgreSQL) or MAPP (macOS, Apache, PHP, and PostgreSQL) stack for ease of development. If you use either of these, pay attention to the directory where they were installed and the PostgreSQL database credentials you supply. Those will all become useful shortly.
 
 * [WAPP Stack](https://bitnami.com/stack/wapp)
 * [MAPP Stack](https://bitnami.com/stack/mapp)
@@ -72,7 +74,7 @@ For your future sanity, all of these **must** report version information to guar
 
 ### Add missing directories to your system PATH
 
-Heroku and Composer should have added themselves to your system PATH. If they did not, uninstall and reinstall them.
+git, Heroku, and Composer should have added themselves to your system PATH. If they did not, uninstall and reinstall them.
 
 If `psql` is missing, you must add `<Bitnami install directory>\PostgreSQL\bin` to your system PATH.
 
@@ -240,17 +242,19 @@ heroku open
 
 From the command line in your local repository, run the following to generate a new Heroku PostgreSQL with a randomly assigned name.
 
+```shell
+heroku addons:create heroku-postgresql:hobby-dev
+```
+
 Note that Heroku only provides [recent versions of PostgreSQL](https://devcenter.heroku.com/articles/heroku-postgresql#version-support-and-legacy-infrastructure). Attempting to connect with a mismatched PostgreSQL client from your local machine will be difficult. If you need to, specify a version with the `--version` flag as indicated in Heroku's documentation.
 
 ```shell
-heroku addons:create heroku-postgresql:hobby-dev
 heroku addons:create heroku-postgresql:hobby-dev --version <version>
 ```
 
 Afterward, check your Heroku configuration to see the contents of your remote `DATABASE_URL` environment variable.
 
 ```shell
-heroku config
 heroku config:get DATABASE_URL
 ```
 
@@ -269,7 +273,9 @@ If the above fails for any reason, copy your `DATABASE_URL` variable from the ou
 psql <your copied DATABASE_URL variable>
 ```
 
+Again, you can quit the `psql` shell by entering `\q`.
+
 
 ## Setup complete
 
-Congratulations! If you made it this far successfully, your PHP project repository, local development environment, and remote application host are good to go. If you encountered an issue along the way, please reach out to me through the class's Slack channel for help figuring out where things went astray.
+Congratulations! If you made it this far successfully then your PHP project repository, local development environment, and remote application host are good to go. If you encountered an issue along the way, please reach out to me through the class's Slack channel for help figuring out where things went astray.
