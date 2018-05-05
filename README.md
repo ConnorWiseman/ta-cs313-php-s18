@@ -139,12 +139,19 @@ For simplicity's sake, I personally advise altering your local web server's conf
 
 If you installed your local web server manually, see its documentation for instructions on how to change the server root to your local repository's public-facing subdirectory.
 
-For the Bitnami web stacks, you will need to edit `<Bitnami install directory>\apache2\conf\httpd.conf`. Find this file, then perform the following tasks.
+For the Bitnami web stacks, first, you will need to edit `<Bitnami install directory>\apache2\conf\httpd.conf`. Find this file, then perform the following tasks.
 
 1. Open `httpd.conf` in a text editor
 2. Change the path specified by `DocumentRoot` to the path to the public-facing subdirectory in your local repository
-3. Save `httpd.conf`
-4. Restart your local web server
+3. Change the path specified in the `Directory` directive immediately below `DocumentRoot` to match
+4. Save `httpd.conf`
+
+Second, you will need to edit `<Bitnami install directory\apache2\conf\bitnami.conf`. Find this file, then perform the following tasks.
+1. Open `bitnami.conf` in a text editor
+2. Change the path specified by `DocumentRoot` under the `VirtualHost` serving default traffic
+3. Change the path specified in the `Directory` directive immediately below `DocumentRoot` to match
+4. Save `bitnami.conf`
+5. Restart your local web server
 
 Ensure that your changes were successful by creating a simple HTML or PHP file in your local repository's public-facing subdirectory and navigating to it from localhost. You may need to clear your browser's cache or perform a "hard" refresh to fetch the most recent changes from your local web server.
 
