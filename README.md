@@ -1,8 +1,19 @@
 # CS313 - Heroku PHP Application Setup
 
-See also the instuctions in I-Learn and Heroku's official example repository at  [heroku/php-getting-started](https://github.com/heroku/php-getting-started).
+See also the instuctions in I-Learn, the course's boilerplate repository at [roblyon/cs313-php](https://github.com/roblyon/cs313-php), and Heroku's official example repository at  [heroku/php-getting-started](https://github.com/heroku/php-getting-started).
 
-As of Spring Semester 2018, these instructions are somewhat outdated. The course no longer explicitly has students install a local development environment. This material is merely supplemental.
+As of Spring Semester 2018, these instructions are somewhat outdated:
+
+* &#x1F34E; The course no longer explicitly has students install a local development environment.
+* &#x1F34E; This material is merely supplemental.
+* &#x1F34E; This material does **not** constitute a course requirement.
+* &#x1F34E; Following this material does **not** replace a working application at Heroku.
+
+Whether students set up a local development environment or not, _all_ students are still expected to have their project working out at Heroku. A local development environment only helps speed up development time. Students should still:
+
+* &#x1F34F; Push their code to Heroku.
+* &#x1F34F; Test their application at Heroku.
+* &#x1F34F; Develop for Heroku, not locally.
 
 
 ## Before beginning
@@ -113,6 +124,11 @@ In addition, your public-facing subdirectory should probably contain an `index.p
 Add these files to your local repository. See the sample files in this repository for examples on what they should contain.
 
 Note that in Linux, file paths are case-sensitive. Heroku runs all its applications through Linux containers. `Procfile` and `composer.json` **must** therefore be capitalized exactly as they appear above.
+
+
+### Specify which version of PHP to use
+
+You can always change the version of PHP declared in your `composer.json` file to a different version if you would like to run a different version of PHP at Heroku to match your local PHP installation. Please see [Heroku PHP Support - Selecting a runtime](https://devcenter.heroku.com/articles/php-support#selecting-a-runtime) for more information.
 
 
 ## Push initial changes to GitHub
@@ -286,3 +302,7 @@ Again, you can quit the `psql` shell by entering `\q`.
 ## Setup complete
 
 Congratulations! If you made it this far successfully then your PHP project repository, local development environment, and remote application host are good to go. If you encountered an issue along the way, please reach out to me through the class's Slack channel for help figuring out where things went astray.
+
+## Next steps
+
+Consider enabling [Heroku's GitHub integration](https://devcenter.heroku.com/articles/github-integration#enabling-github-integration) hook so that you can push your code only once and have the changes reflected both on GitHub _and_ on Heroku!
