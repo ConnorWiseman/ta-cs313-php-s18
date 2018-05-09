@@ -197,7 +197,7 @@ For your development environment, you will probably want to change these setting
 2. Open `php.ini` in a text editor
 3. Find the `Error handling and logging` section
 4. Set `error_reporting` to `E_ALL`
-5. Set `display_errors` to `ON`
+5. Set `display_errors` to `On`
 6. Uncomment `error_reporting` and `display_errors` if necessary by removing the semicolon at the beginning of the lines
 7. Find the `opcache` section
 8. Set `opcache.enable` to `0`
