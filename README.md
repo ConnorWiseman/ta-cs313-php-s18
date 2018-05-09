@@ -51,6 +51,7 @@ In the past, the course recommended either Bitnami's WAPP (Windows, Apache, PHP,
 
 * [WAPP Stack](https://bitnami.com/stack/wapp)
 * [MAPP Stack](https://bitnami.com/stack/mapp)
+* [LAPP Stack](https://bitnami.com/stack/lapp)
 
 Advanced users who prefer more flexibility may install or download the individual component parts of a local development stack. However, setting up your own development environment is not discussed in the course. Proceed at your own risk.
 
